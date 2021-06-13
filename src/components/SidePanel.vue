@@ -57,8 +57,8 @@
             <span class="contact-status online"></span>
             <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
             <div class="meta">
-              <p class="name" v-if="chat.group">{{chat.node.name}} </p>
-              <p class="name" v-else>{{getUser(chat)}} </p>
+              <p class="name" v-if="chat.node.group">{{chat.node.name}} </p>
+              <p class="name" v-else>{{getUser(chat)}} {{ chat.node.group }}</p>
               <p class="preview">{{lastMessage(chat)}}</p>
             </div>
           </div>

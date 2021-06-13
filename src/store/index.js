@@ -167,6 +167,7 @@ export default new Vuex.Store({
           edges {
             node {
               id
+              group
               name
               lastModified
               participants {
@@ -220,6 +221,7 @@ export default new Vuex.Store({
       localStorage.setItem("expiry", dt)
       clearInterval(state.intervalObj);
       this.commit("LogoutTimer", dt)
+      this.commit("AuthVerified")
       sessionStorage.setItem("refresh_token", data.refresh_token)
       if (data.push) {
         let next_url = data.next_url
